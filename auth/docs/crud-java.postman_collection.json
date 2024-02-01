@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c4031327-53f6-4894-8688-b3340980d6ab",
+		"name": "crud-java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3883748"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "nuevo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ellery7\",\r\n    \"nombreUsuario\": \"admin7\",\r\n    \"email\": \"elleryrobles7@gmail.com\",\r\n    \"password\": \"admin\",\r\n    \"roles\": [\r\n        1,\r\n        2\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/nuevo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"nuevo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreUsuario\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzA1NDM3NTYwLCJleHAiOjE3MDU0NDQwNDB9.VfUi-ZXR8RtDiuk79qP9JLmd-om0L05Uv1yMW_6cxQ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Tomate de Arbol\",\r\n    \"precio\": \"1500.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inicianConA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzA1NDQwNjg0LCJleHAiOjE3MDU0NDcxNjR9.L0d5_Yd7M2nz2ltzUq6aCgnSNi34ilZAR2lgxb5VQNk",
+									"type": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/inicianConA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"inicianConA"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
