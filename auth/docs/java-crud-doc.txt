@@ -2,3 +2,6 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v mari
 
 https://v1.tailwindcss.com/docs/installation
 
+https://coderthemes.com/konrix/layouts/docs-changelog.html
+
+https://elements.envato.com/es/konrix-laravel-tailwind-admin-dashboard-template-Q98J6WA
