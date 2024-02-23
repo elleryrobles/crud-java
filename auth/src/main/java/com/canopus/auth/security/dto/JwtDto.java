@@ -1,6 +1,5 @@
 package com.canopus.auth.security.dto;
 
-
 public class JwtDto {
     private String token;
 

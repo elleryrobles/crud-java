@@ -1,6 +1,9 @@
 package com.canopus.auth.security.controller;
 
-import com.canopus.auth.security.dto.*;
+import com.canopus.auth.security.dto.JwtDto;
+import com.canopus.auth.security.dto.LoginUsuario;
+import com.canopus.auth.security.dto.Mensaje;
+import com.canopus.auth.security.dto.NuevoUsuario;
 import com.canopus.auth.security.entity.Rol;
 import com.canopus.auth.security.entity.Usuario;
 import com.canopus.auth.security.enums.RolNombre;
@@ -24,12 +27,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/user")
 @CrossOrigin
-public class AuthController {
+public class UserController {
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -96,8 +101,8 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.OK).body(jwt);
     }
 
-    @ApiOperation("Muestra una lista de usuarios")
-    @PreAuthorize("hasRole('ADMIN')")
+    //@ApiOperation("Muestra una lista de usuarios")
+    //@PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping(value = "/list")
     public ResponseEntity<List<Usuario>> list() {
         List<Usuario> list = usuarioService.list();

@@ -46,11 +46,11 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo(){
         return new ApiInfo(
-                "Tutorial JWT",
+                "Canopus CRM",
                 "Descripción",
-                "2.0",
+                "1.0",
                 "Términos y Condiciones",
-                new Contact("Luigi Code", "www.luigicode77.es", "micorreo@gmail.com"),
+                new Contact("Ellery David Robles Gomez", "www.elleryrobles.com", "micorreo@gmail.com"),
                 "Licencia",
                 "www.licencia.com",
                 Collections.emptyList()
